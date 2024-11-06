@@ -1,0 +1,30 @@
+services:
+  wordpress:
+    build: ..
+    image: wordpress
+    restart: always
+    ports:
+      - 8088:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: admin
+      WORDPRESS_DB_PASSWORD: admin
+      WORDPRESS_DB_NAME: db
+    volumes:
+      - ./cinar:/var/www/html/wp-content/themes/cinar
+      # - ./wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      # - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
