@@ -3,8 +3,8 @@
  * Шаблон для отображения 404 страниц (не найден)
  *
  * @package WordPress
- * @subpackage K-Telecom
- * @since K-Telecom 1.0
+ * @subpackage Cinar
+ * @since cinar 1.0
  */
 
 get_header();
