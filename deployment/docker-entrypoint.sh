@@ -26,7 +26,7 @@ wp plugin list --field=name --allow-root | xargs -I {} wp plugin delete {} --all
 # Устанавливаем плагин Contact
 wp plugin install contact-form-7 --activate --allow-root
 # Устанавливаем плагин ACF PRO из ZIP-файла
-curl -o /tmp/acf.zip -L https://download1073.mediafire.com/wgyp1bt5smhgnC81H5HXMQB70jqmedPzmaG4sR4gBJlrfGkYEfSxcE2c4FcUKpuvW4kKRVvcR0CIlxPqVPlOMhqA-ICPOTuAkdiyS1MmchZTZkmVsGtLc9ppILaSd3fYOjxvEa7OPwmAvBzkDvjTMZkRqqWAgS0rSyj6cPsEJKVM/nqhnqxc1wzugzam/advanced-custom-fields-pro.6.3.7.zip
+curl -o /tmp/acf.zip -L https://download1073.mediafire.com/tgog93dee8wgtfNfTEx4yi-dOusjrLydTGRa5pBvkysT1kxlNG750vx6ZXBLNyGm7XvykDqYabpFr5Hm1EBUCkrtW8LBVDG4a698ffa20Jr64hrdHKdiEXg0_dx5KYY2GGYhebML4nyjNVP0HJxQRcKMiScxCH7b2kRSA-oDLX6L/nqhnqxc1wzugzam/advanced-custom-fields-pro.6.3.7.zip
 if [ -f /tmp/acf.zip ]; then
   wp plugin install /tmp/acf.zip --activate --allow-root
 else
