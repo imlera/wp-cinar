@@ -1,0 +1,16 @@
+@use "../../configs/colors" as d;
+@use "../../utils/mixins" as mn;
+
+/* ========== border-color ========== */
+
+$abb: border;
+$att: border-color;
+
+@include mn.GetClassNames($abb, $att, d.$obj);
+
+$ar_abb: [top, bottom, left, right];
+@each $arv in $ar_abb {
+  $abb: border-#{ $arv };
+  $att: border-#{ $arv }-color;
+  @include mn.GetClassNames($abb, $att, d.$obj);
+}

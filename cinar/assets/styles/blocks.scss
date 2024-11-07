@@ -1,0 +1,34 @@
+@use "utils";
+
+.driver-cars {
+  .car-card {
+    h3, p {
+      margin-bottom: 0;
+    }
+
+    .content {
+      box-shadow: var(--wp--preset--shadow--car-card);
+
+      &__img {
+        height: utils.to_rem(168);
+      }
+
+      &__title {
+        &::after {
+          content: "";
+          width: utils.to_rem(56);
+          height: utils.to_rem(2);
+          border-radius: utils.to_rem(100);
+          display: block;
+          background-color: var(--wp--preset--color--red);
+        }
+      }
+
+      &__price-vars.price-vars {
+        &__item.price-var {
+          margin-bottom: utils.to_rem(3);
+        }
+      }
+    }
+  }
+}

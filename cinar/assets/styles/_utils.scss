@@ -1,0 +1,9 @@
+@function to_rem($num) {
+  @return calc($num / 16) + rem;
+}
+
+@mixin media_query($px) {
+  @media screen and (max-width: #{$px}px) {
+    @content;
+  }
+}

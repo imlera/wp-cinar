@@ -1,0 +1,9 @@
+@use "../../utils/mixins" as mn;
+
+/* ========== grid ========== */
+
+$abb: grid-columns;
+$att: grid-template-columns;
+$obj: ();
+
+//@include mn.GetClassNames($abb, $att, $obj);
